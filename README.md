@@ -22,7 +22,7 @@ All participating nodes in PEHRA, choose an interval at which they wakeUp() them
 All participating nodes reElect Peharedar node before the end of term length of Peharedar node.
 
 
-```election(peharedar = random(nodes)):```
+```peharedar = election(random(nodes)):```
 
 All participating nodes entering in elections are choose randomly to dimish predictibility and attack on the Peharedar node.
 
