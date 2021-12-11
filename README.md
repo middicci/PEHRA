@@ -1,5 +1,5 @@
 
-# P.E.H.R.A - Protocol for Energy Harvesting & Restituion Automation
+# P.E.H.R.A - Protocol for Energy Harvesting & Restitution Automation
 
 
 ## Kafka - PEHRA (Energy Saving Protocol for Kafka cluster) 
