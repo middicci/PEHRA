@@ -1,4 +1,8 @@
-# Kafka - PEHRA (Energy Saving Protocol for Kafka cluster)  #COP26
+
+# P.E.H.R.A - Protocol for Energy Harvesting & Restituion Automation
+
+
+## Kafka - PEHRA (Energy Saving Protocol for Kafka cluster) 
 
 In order to save energy consumption by keeping some nodes dormant in the kafka cluster a protocol is required for inter-node communication.
 
@@ -40,7 +44,7 @@ Peharedar node sends wakeUpAll() signal to all dormant nodes when it receives a 
 
 
 
-
+# COP26
 
 
 
