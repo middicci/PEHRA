@@ -62,16 +62,16 @@ class Pehra():
 			else:
 				if DEBUG: print("New task: ", task)
 				if(self.pehredar):
-					self._wake_up_all()
 					t_elect.cancel()
 
-				if self._all_nodes_active():
-					n = self.nodes[random.randint(0, len(self.nodes) - 1)]
-				if DEBUG: print("Task Node {}, {}, with task {} ".format(n.id, n.state, task))
-			
-		if not self._all_nodes_active():
-			if DEBUG: print("Alert :: Cluster Down ", self._disp(self.nodes))
-			self._wake_up_all() # try to wake up all
+				active_nodes = self._any_nodes_active()
+				if active_nodes:
+					n = self.nodes[random.randint(0, len(active_nodes) - 1)] # simulates assign task
+					if DEBUG: print("Task Node {}, {}, with task {} ".format(n.id, n.state, task))
+				else:
+					if DEBUG: print("Alert :: Cluster Down ", self._disp(self.nodes))
+					self._wake_up_all()
+	
 
 	def _tasks(self):
 		task = int(input()) # incoming traffic
@@ -137,6 +137,14 @@ class Pehra():
 
 		return all_active
 
+	def _any_nodes_active(self):
+		active_nodes = []
+		for n in self.nodes:
+			if n.state == State.ACTIVE:
+				active_nodes.append(n)
+		return active_nodes
+
+
 	def subscribe_to_pehra(self, node, sub=True): # subscribe/unsubscribe a node to PEHRA
 
 		subscribed = False
@@ -164,7 +172,7 @@ class Pehra():
 
 print("Usage: {}".format(MENU))
 
-nodes = [Node('x', State.ACTIVE, True), Node('y', State.ACTIVE, True), Node('z', State.ACTIVE, False)]
+nodes = [Node('x', State.ACTIVE, True), Node('y', State.ACTIVE, True), Node('z', State.ACTIVE, True)]
 
 p = Pehra(nodes)
 
