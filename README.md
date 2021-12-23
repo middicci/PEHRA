@@ -1,8 +1,10 @@
 
-# P.E.H.R.A - Protocol for Energy Harvesting & Recovery Automation   #COP26
+# P.E.H.R.A - Protocol for Energy Harvesting & Recovery Automation   
+
+#COP26
 
 
-## Kafka - PEHRA (Energy Saving Protocol for Kafka cluster) 
+## Kafka - PEHRA (Energy Saving Protocol for Kafka cluster) [When The Internet Sleeps](https://www.youtube.com/watch?v=HHAumsoMG3E)
 
 In order to save energy consumption by keeping some nodes dormant in the kafka cluster a protocol is required for inter-node communication.
 
