@@ -51,7 +51,7 @@ Pehredar node can disable PEHRA mode and/or wakeUpAll() before doing so if it re
 
 Only a human admin can enable/disable PEHRA mode at any moment for a given cluster after calling wakeUpAll().
 
-````selfChk(node)```
+```selfChk(node)```
 
 All nodes can independently check if they are participant in PEHRA and stayAwake().
 
