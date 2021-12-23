@@ -25,7 +25,7 @@ Pehredar node sends wakeUpAll() signal to all dormant nodes when it start receiv
 
 ```reElection(nodes, term):```
 
-All participating nodes reElect Pehredar node before the end of term length of Pehredar node.
+All participating nodes reElect Pehredar node before the end of term length of Pehredar node at a pre-set interval.
 
 
 ```maintenance(nodes):```
@@ -44,14 +44,16 @@ All nodes except Pehredar node are allowed to sleep/hibernate for a specified am
 
 ```disablePehra(Pehredar):```
 
-Pehredar node can disable PEHRA mode and wakeUpAll() before doing so if it receives traffic of any kind.
+Pehredar node can disable PEHRA mode and/or wakeUpAll() before doing so if it receives traffic of any kind.
 
 
 ```enablePehra(nodes)```
 
-Only a human admin can enable PEHRA mode at any time for a given cluster. A human admin can also disable PEHRA at any moment.
+Only a human admin can enable/disable PEHRA mode at any moment for a given cluster after calling wakeUpAll().
 
+````selfChk(node)```
 
+All nodes can independently check if they are participant in PEHRA and stayAwake().
 
 
 
