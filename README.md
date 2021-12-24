@@ -56,7 +56,9 @@ Only a human admin can enable/disable PEHRA mode at any moment for a given clust
 All nodes can independently check if they are participant in PEHRA and stayAwake().
 
 
+# Flow Chart
 
+![Alt P.E.H.R.A. Flow Chart](pehra_flow.svg)
 
 
 
