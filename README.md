@@ -60,6 +60,63 @@ All nodes can independently check if they are participant in PEHRA and stayAwake
 
 ![Alt P.E.H.R.A. Flow Chart](pehra_flow.svg)
 
+# Python Sim
+
+````
+> python3 pehra_sim.py
+
+Usage: enter 0 to simulate no traffic condition, enter > 0 to simulate traffic condition
+
+Node x Self check done... State: State.ACTIVE, Pehredar: False
+Node y Self check done... State: State.ACTIVE, Pehredar: False
+Node z Self check done... State: State.ACTIVE, Pehredar: False
+1
+Incoming task:  1
+New task:  1
+Task Node z, State.ACTIVE, with task 1
+Node x Self check done... State: State.ACTIVE, Pehredar: False
+Node z Self check done... State: State.ACTIVE, Pehredar: False
+Node y Self check done... State: State.ACTIVE, Pehredar: False
+1
+Incoming task:  1
+New task:  1
+Task Node x, State.ACTIVE, with task 1
+Node x Self check done... State: State.ACTIVE, Pehredar: False
+Node z Self check done... State: State.ACTIVE, Pehredar: False
+Node y Self check done... State: State.ACTIVE, Pehredar: False
+0
+Incoming task:  0
+Nodes before allowed to sleep all:  ['Node: x, State: State.ACTIVE, Pehredar: False', 'Node: y, State: State.ACTIVE, Pehredar: False', 'Node: z, State: State.ACTIVE, Pehredar: False']
+Current Pehredar: No Pehredar
+New Pehredar:  x
+Nodes after election:  ['Node: x, State: State.ACTIVE, Pehredar: True', 'Node: y, State: State.ACTIVE, Pehredar: False', 'Node: z, State: State.ACTIVE, Pehredar: False']
+Nodes after allowed to sleep all:  ['Node: x, State: State.ACTIVE, Pehredar: True', 'Node: y, State: State.SLEEPING, Pehredar: False', 'Node: z, State: State.SLEEPING, Pehredar: False']
+Node x Called Stay Awake, State: State.ACTIVE, Pehredar: True
+Node y Self check done... State: State.SLEEPING, Pehredar: False
+Node z Self check done... State: State.SLEEPING, Pehredar: False
+Node x Self check done... State: State.ACTIVE, Pehredar: True
+0
+Incoming task:  0
+Nodes before allowed to sleep all:  ['Node: x, State: State.ACTIVE, Pehredar: True', 'Node: y, State: State.SLEEPING, Pehredar: False', 'Node: z, State: State.SLEEPING, Pehredar: False']
+Current Pehredar: x
+New Pehredar:  z
+Nodes after election:  ['Node: x, State: State.ACTIVE, Pehredar: False', 'Node: y, State: State.SLEEPING, Pehredar: False', 'Node: z, State: State.ACTIVE, Pehredar: True']
+Nodes after allowed to sleep all:  ['Node: x, State: State.SLEEPING, Pehredar: False', 'Node: y, State: State.SLEEPING, Pehredar: False', 'Node: z, State: State.ACTIVE, Pehredar: True']
+Node y Self check done... State: State.SLEEPING, Pehredar: False
+Node z Called Stay Awake, State: State.ACTIVE, Pehredar: True
+Node x Self check done... State: State.SLEEPING, Pehredar: False
+Node z Self check done... State: State.ACTIVE, Pehredar: True
+1
+Incoming task:  1
+New task:  1
+Task Node x, State.SLEEPING, with task 1
+Node z Called Stay Awake, State: State.ACTIVE, Pehredar: True
+Node z Self check done... State: State.ACTIVE, Pehredar: True
+Node y Self check done... State: State.SLEEPING, Pehredar: False
+Node x Self check done... State: State.SLEEPING, Pehredar: False
+
+````
+
 
 
 
